@@ -33,7 +33,17 @@
     4. Write SQL queries for each SQL query
 
 ## Python (Functional and Object-Oriented)
+    -CRUD
+        *Create: 
+            def createHero():
+                name = input ("Enter your hero' name)
+                superpower = input("Enter your hero's superpower")
+
+                print("Your hero has been created")
 
 
 
 ## SQL (Queries/Results)
+
+
+
