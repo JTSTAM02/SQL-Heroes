@@ -55,6 +55,8 @@
 
         * Update:
             def update_my_hero():
+                input("Enter the hero's name: ".)
+                input("Enter your new superpower: ")
 
 
 
@@ -73,7 +75,7 @@
         - This should ultimately display all of the data from the table Heroes for my User.
 
     UPDATE for update_my_hero()
-        - This should ultimately allow the user to input their hero's name and then allow them to type in a changed superpower, that will then be changed in the appropriate table.
+        - This should ultimately allow the user to input their hero's name and then allow them to type in a changed value, that will then be changed in the appropriate table.
 
     DELETE for delete_hero():
         - This should ultimately erase the chosen hero (chosen by ID) and completely rases their entire row of data from the table.
