@@ -1,8 +1,6 @@
 import psycopg2
 from database.connection import execute_query, create_connection
 
-execute_query("SELECT * FROM Heroes;")
-
 def create_hero():
     # Prompt the user for hero details
     name = input("Enter the hero's name: ")
@@ -12,6 +10,5 @@ def create_hero():
     params = (name, about_me, biography)
     execute_query(query, params)
     print("Hero created successfully!")
-
 
 execute_query(create_hero())

@@ -11,7 +11,7 @@
         * Specific Python functions for each CRUD
 
     -Could-Haves:
-        * 
+        * Additional CRUD Operations (> 4)
 
     -Won't-Haves / Wish:
         * Frontend
@@ -19,7 +19,7 @@
 
 ## User Stories
     - As a user, I can create my own hero with a name and superpower.
-    - As a user, I can read and display the table with all heroes and their powers, including mine.
+    - As a user, I can read and display the table with all heroes and their info, including mine.
     - As a user, I can update my hero's superpower.
     - As a user, I can delete my hero altogether.
 
@@ -36,14 +36,49 @@
     -CRUD
         *Create: 
             def createHero():
-                name = input ("Enter your hero' name)
+                name = input("Enter your hero' name)
                 superpower = input("Enter your hero's superpower")
-
                 print("Your hero has been created")
+        
+        *Read:
+             def readTable():
+                query = """
+                SELECT * FROM Heroes;
+                """
+
+                returned_items = execute_query(query).fetchAll
+                for item in returned_items:
+                    (item[1])
+                return returned_items
 
 
 
-## SQL (Queries/Results)
+        * Update:
+            def updateMyHero():
+
+
+
+        * Delete:
+            def deleteHero(hero_id):
+                query = "DELETE FROM Heroes WHERE id = %s"
+                params = (hero_id)
+
+
+## SQL (Results)
+
+    CREATE for createHero():
+        - This should ultimately add the hero to the heroes table and include the about me and biography columns.
+
+    READ for readTable() :
+        - This should ultimately display all of the data from the table Heroes for my User.
+
+    UPDATE for updateMyHero()
+        - This should ultimately allow the user to input their hero's name and then allow them to type in a changed superpower, that will then be changed in the appropriate table.
+
+    DELETE for deleteHero():
+        - This should ultimately erase the chosen hero (chosen by ID) and completely rases their entire row of data from the table.
+
+       
 
 
 
