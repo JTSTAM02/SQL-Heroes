@@ -78,7 +78,7 @@
         - This should ultimately allow the user to input their hero's name and then allow them to type in a changed value, that will then be changed in the appropriate table.
 
     DELETE for delete_hero():
-        - This should ultimately erase the chosen hero (chosen by ID) and completely rases their entire row of data from the table.
+        - This should ultimately erase the chosen hero (chosen by ID) and completely erases their entire row of data from the table.
 
        
 
