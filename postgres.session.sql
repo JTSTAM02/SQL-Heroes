@@ -6,6 +6,8 @@ CREATE TABLE IF NOT EXISTS heroes (
     image_url VARCHAR(64)
 );
 
+
+
 INSERT INTO
     heroes (name, about_me, biography)
 VALUES
@@ -201,7 +203,7 @@ VALUES
     ('Super Vision');
 
 -- SQLINES LICENSE FOR EVALUATION USE ONLY
--- CREATE SEQUENCE abilities_seq;
+CREATE SEQUENCE abilities_seq;
 
 CREATE TABLE abilities (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
