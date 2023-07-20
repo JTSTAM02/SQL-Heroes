@@ -22,7 +22,7 @@ def execute_query(query, params=None):
         cursor.execute(query, params)
         connection.commit()
         print("Query executed successfully")
-        connection.close()
+        # connection.close()
         return cursor
     except OSError as e:
         print(f"The error '{e}' occurred or the hero name is already taken")

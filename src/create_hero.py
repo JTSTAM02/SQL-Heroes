@@ -1,5 +1,4 @@
-import psycopg2
-from database.connection import execute_query, create_connection
+from database.connection import execute_query
 
 def create_hero():
     # Prompt the user for hero details
