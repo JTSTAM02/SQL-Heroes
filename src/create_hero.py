@@ -9,4 +9,12 @@ def create_hero():
     execute_query(query, params)
     print("Hero created successfully!")
 
-execute_query(create_hero())
+
+
+def create_superpower():
+    superpower = input("What superpower do you want your hero to have? Enter it here: ")
+    ability_type_query = "INSERT INTO ability_types (name) VALUES (%s)"
+    execute_query(ability_type_query, (superpower, ))
+
+create_hero()
+create_superpower()
