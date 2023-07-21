@@ -1,4 +1,4 @@
-from psycopg2 import connect, OperationalError, errors
+from psycopg2 import connect, OperationalError, errors # added psycopg2.errors for handing of user error
 
 def create_connection(db_name, db_user, db_password, db_host="localhost", db_port="5432"):
     connection = None
@@ -19,13 +19,13 @@ def execute_query(query, params=None):
     connection = create_connection("postgres", "postgres", "postgres")
     cursor = connection.cursor()
     try:
-        if params is not None:
+        if params is not None: # added to keep from error
             cursor.execute(query, params)
         else:
             cursor.execute(query)
 
-        if cursor.description is not None: 
-            result = cursor.fetchall()
+        if cursor.description is not None: # added to keep from error when there was no data to fetch 
+            result = cursor.fetchall() #fetchall ensured proper fetch of my data
         else:
             result = None
 
@@ -33,7 +33,7 @@ def execute_query(query, params=None):
         print("Query executed successfully")
         connection.close()
         return result, True 
-    except errors.UndefinedTable:
+    except errors.UndefinedTable: # following were added to handle user error across all files
         print("There is not a table with that name. Please check your spelling and try again.")
         connection.close()
         return None, False  
